@@ -58,7 +58,9 @@ def add_blog(request):
             if form.is_valid():
                 title = form.cleaned_data['title']
                 cont = form.cleaned_data['cont']
-                blg = Blog(title=title, cont = cont)
+                image = request.FILES['image']
+                author = form.cleaned_data['author']
+                blg = Blog(title=title, cont = cont,image = image,author = author)
                 blg.save()
                 form = BlogForm()
         else:

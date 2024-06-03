@@ -25,6 +25,6 @@ class LoginForm(AuthenticationForm):
 class BlogForm(forms.ModelForm):
     class Meta:
         model = Blog
-        fields = ['title','cont']
-        labels = {'title':'Title','cont':'Content'}
-        widgets = {'title':forms.TextInput(attrs={'class':'form-control'}),'cont':forms.Textarea(attrs={'class':'form-control'})}
+        fields = ['title','cont','author']
+        labels = {'title':'Title','cont':'Content','author':'Author'}
+        widgets = {'title':forms.TextInput(attrs={'class':'form-control'}),'cont':forms.Textarea(attrs={'class':'form-control'}),'author':forms.TextInput(attrs={'class':'form-control'})}

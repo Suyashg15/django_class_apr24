@@ -7,8 +7,12 @@
     {% for blog in blogs %}
     <div class= "jumbotron jumbotron-fluid jumbo-color">
         <div class="container">
+            <img src="media/{{blog.image}}" alt="Image" style="width: 200px; height: 250px;">
             <h2 class="display-3 font-weight-bold">{{ blog.title }}</h2>
             <p class="lead text-dark">{{ blog.cont }}</p>
+            <br>
+            <h4 class="display-7 font-weight-thead-light">Author : {{blog.author}}</h4>
+
         </div>
     </div>
     {% endfor %}
